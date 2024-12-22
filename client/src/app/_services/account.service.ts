@@ -8,6 +8,7 @@ import { map } from 'rxjs';
 })
 export class AccountService {
   private http = inject(HttpClient);
+
   baseUrl="http://localhost:5000/api/";
   currentUser = signal<User|null>(null);
   
