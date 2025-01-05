@@ -15,7 +15,7 @@ export const routes: Routes = [
     {path:"server-error", component:ServerErrorComponent},
     {path:"not-found", component:NotFoundComponent},
     {path:"members", component:MemberListComponent, canActivate:[authGuard] },
-    {path:"member/:id", component:MemberDetailComponent,canActivate:[authGuard]},
+    {path:"member/:username", component:MemberDetailComponent,canActivate:[authGuard]},
     {path:"list", component:ListsComponent,canActivate:[authGuard]},
     {path:"messages", component:MessagesComponent,canActivate:[authGuard]},
     {path:"**", component:HomeComponent ,pathMatch:'full'},
