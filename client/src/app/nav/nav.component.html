@@ -20,8 +20,9 @@
         </ul>
         
         
-        @if(this.accountService.currentUser()){
+        @if(accountService.currentUser()){
             <div dropdown class="dropdown">
+              <img class="mr-2" src="{{accountService.currentUser()?.photoUrl || '.assets/user.png' }}" alt="user main image">
               <button dropdownToggle class="dropdoen-toggle btn btn-outline-primary">Welcome {{this.accountService.currentUser()?.username | titlecase}}</button>
                 <div *dropdownMenu class="dropdown-menu">
                   <a routerLink="/member/edit" class="dropdown-item">Edit Profile</a>
@@ -30,7 +31,7 @@
             </div>
         }
 
-        @if (!this.accountService.currentUser()) {
+        @if (!accountService.currentUser()) {
           <form #loginForm="ngForm" (ngSubmit)="logIn()" class="d-flex">
             <input name="username" [(ngModel)]="model.username" class="form-control me-2" placeholder="Username" >
             <input name="password" [(ngModel)]="model.password" class="form-control me-2" placeholder="Password" type="password" >
