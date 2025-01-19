@@ -10,6 +10,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { preventUnsavedChangesGuard } from './_gaurd/prevent-unsaved-changes.guard';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
     {path:"test-error", component:TestErrorsComponent},
